@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+}
+
+//設定header
+
+nav {
+  background-color: rgb(68, 131, 116);
+  position: sticky;
+  top: 0;
+  font-size: 1.4rem;
+  z-index: 5;
+  height: 10vh;
+
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      margin: 1rem;
+
+      a {
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+          color: rgb(192, 201, 190);
+        }
+      }
+    }
+  }
+}
+
+//設定首頁
+
+body {
+  main {
+    section.main-area {
+      min-height: 70vh;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      div.info {
+        flex-basis: 700px;
+
+        h1 {
+          font-size: 3.5rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+        a {
+          color: white;
+          background-color: rgb(48, 126, 108);
+          padding: 0.25rem 0.5rem;
+          font-size: 1.5rem;
+          border-radius: 20px;
+
+          display: inline-block;
+          margin-top: 2rem;
+          text-decoration: none;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      div.photo {
+        flex-basis: 300px;
+        max-height: 60vh;
+        max-width: 30vw;
+      }
+    }
+  }
+}
+
+//設定Bryan頁面
+
+body.Bryan {
+  main {
+    section.about-me {
+      background-color: rgb(241, 237, 228);
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      div.discript {
+        width: 50vw;
+        margin: 2rem;
+        h2 {
+          font-size: 3rem;
+          margin-bottom: 2rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      div.photo {
+        margin: 2rem;
+        img {
+          width: 30vw;
+          height: 60vh;
+        }
+      }
+    }
+    section.resume {
+      margin: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.35rem;
+      h2 {
+        font-size: 3rem;
+      }
+      section.table {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        table {
+          font-size: 1.25rem;
+          tr {
+            margin: 1rem;
+            border-bottom: 1.25px solid black;
+            border-top: 1.25px solid black;
+            td.title {
+              font-size: 1.5rem;
+              padding-right: 100px;
+            }
+          }
+          img {
+            margin: 0.25rem 0.5rem;
+            width: 3vw;
+            height: 7vh;
+          }
+        }
+      }
+    }
+    section.skills {
+      background-color: rgb(223, 214, 209);
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      h2 {
+        margin: 2rem;
+        font-size: 3rem;
+      }
+      .progress-bar-area {
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 2rem 5rem;
+        h3 {
+          font-weight: bold;
+          font-size: 2rem;
+        }
+        p {
+          margin-top: 2rem;
+          margin-left: 2rem;
+          font-size: 1.5rem;
+        }
+        div.progress {
+          width: 50%;
+        }
+        a {
+          margin: 3rem 35rem 3rem 35rem;
+          text-align: center;
+          text-decoration: none;
+          font-size: 1.75rem;
+          width: 20vw;
+          color: aliceblue;
+          border: 1px solid black;
+          background-color: rgb(77, 64, 24);
+          border-radius: 20px;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+//設定作品集的頁面
+
+body.works {
+  background-color: rgb(228, 228, 228);
+  main {
+    .title {
+      font-size: 3rem;
+      text-align: center;
+      margin: 2rem;
+    }
+    div.blocks {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      div.card {
+        margin: 3rem;
+        width: 25rem;
+        height: 35rem;
+        border: 2px solid #154d31e7;
+        &:hover {
+          transform: scale(1.15);
+        }
+        img {
+          margin: 1rem;
+          width: 23rem;
+          height: 20rem;
+        }
+        div.card-body {
+          h5 {
+            font-size: 2rem;
+            text-align: center;
+          }
+          p {
+            font-size: 1rem;
+          }
+          a {
+            background-color: rgb(68, 131, 116);
+            position: relative;
+            left: 25%;
+            margin: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+//RWD
+
+@media screen and (max-width: 650px) {
+  body {
+    main {
+      section.main-area {
+        div.info {
+          padding: 1rem;
+        }
+        div.photo {
+          img {
+            width: 60vw;
+            padding-right: 7rem;
+          }
+        }
+        section.about-me {
+          padding: 1rem 0.5rem;
+          div.desc {
+            width: 80%;
+          }
+        }
+      }
+      section.resume {
+        section.photo {
+          img {
+            width: 80vw;
+            height: 50vh;
+          }
+          div.greenRect,
+          div.greenRect2 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    nav {
+      position: static;
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+}
